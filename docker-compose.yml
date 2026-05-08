@@ -201,6 +201,7 @@ services:
             - WHITEBOARD_COLLAB_SERVER_URL_BASE
         networks:
             meet.jitsi:
+            dokploy-network:
         depends_on:
             - jvb
 
@@ -526,3 +527,5 @@ services:
 # Custom network so all services can communicate using a FQDN
 networks:
     meet.jitsi:
+    dokploy-network:
+        external: true
