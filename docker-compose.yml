@@ -13,7 +13,7 @@ services:
             - "traefik.http.routers.jitsi-udbrbw-web.entrypoints=websecure"
             - "traefik.http.routers.jitsi-udbrbw-web.tls.certresolver=letsencrypt"
             - "traefik.http.services.jitsi-udbrbw-web.loadbalancer.server.port=80"
-            service: "jitsi-web"
+            - "service: jitsi-web"
         volumes:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/web/crontabs:/var/spool/cron/crontabs:Z
